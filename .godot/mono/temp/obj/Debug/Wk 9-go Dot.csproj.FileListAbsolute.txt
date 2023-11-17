@@ -1,0 +1,17 @@
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.csproj.AssemblyReference.cache
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.AssemblyInfoInputs.cache
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.AssemblyInfo.cs
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.csproj.CoreCompileInputs.cache
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\bin\Debug\Wk 9-go Dot.deps.json
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\bin\Debug\Wk 9-go Dot.runtimeconfig.json
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\bin\Debug\Wk 9-go Dot.dll
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\bin\Debug\Wk 9-go Dot.pdb
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.csproj.CopyComplete
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.dll
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\refint\Wk 9-go Dot.dll
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.pdb
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.genruntimeconfig.cache
+C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\ref\Wk 9-go Dot.dll

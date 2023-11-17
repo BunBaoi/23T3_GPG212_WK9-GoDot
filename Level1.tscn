@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnn7dldjq7rik"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kq1xn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4tky"]
+albedo_color = Color(0.301961, 0.227451, 1, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kvl72"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_n7l3e"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i156t"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_275hx"]
+emission_shape = 3
+emission_box_extents = Vector3(10, 0.5, 10)
+direction = Vector3(0, -1, 0)
+spread = 5.0
+initial_velocity_min = 15.0
+initial_velocity_max = 15.0
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nguo2"]
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+point_size = 60.1
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_dlgca"]
+material = SubResource("StandardMaterial3D_nguo2")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+mesh = SubResource("PlaneMesh_kq1xn")
+surface_material_override/0 = SubResource("StandardMaterial3D_f4tky")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kvl72")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 0.0239944, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.942572, 0.334004, 0, -0.334004, 0.942572, 0.161824, 7.31781, 8.06246)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.81244, 1.21063e-08, 0.583045, -0.228151, 0.920259, 0.317915, -0.536553, -0.391309, 0.747655, 9.70692, 9.57227, 12.3376)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.16296, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("CapsuleMesh_n7l3e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("CapsuleShape3D_i156t")
+
+[node name="Rain" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.16296, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Rain"]
+transform = Transform3D(3.01315, 0, 0, 0, 1.18459, 0, 0, 0, 2.98028, 0, 7.46802, 0)
+visibility_aabb = AABB(-10, -10, -10, 20, 20, 20)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_275hx")
+draw_pass_1 = SubResource("RibbonTrailMesh_dlgca")

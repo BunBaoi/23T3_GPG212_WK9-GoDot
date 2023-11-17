@@ -1,0 +1,12 @@
+GPUParticlesCollisionBox3D
+GPUParticles3D
+AnimationPlayer
+Sprite3D
+Node3D
+CollisionShape3D
+MeshInstance3D
+RigidBody3D
+StaticBody3D
+DirectionalLight3D
+OmniLight3D
+Camera3D

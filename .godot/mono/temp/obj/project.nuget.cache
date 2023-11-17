@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "IDXuphGfTDpAIUvQsbvFQkvjFhYNEJJA+jQXXwV+cpJc+JaZ3piWYG2bdqWKX9oBwBRoP3/RBcbjpXQ+yoSmkw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\1022811\\Documents\\WK9-GoDot\\Wk 9-go Dot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\1022811\\.nuget\\packages\\godot.sourcegenerators\\4.1.3\\godot.sourcegenerators.4.1.3.nupkg.sha512",
+    "C:\\Users\\1022811\\.nuget\\packages\\godotsharp\\4.1.3\\godotsharp.4.1.3.nupkg.sha512",
+    "C:\\Users\\1022811\\.nuget\\packages\\godotsharpeditor\\4.1.3\\godotsharpeditor.4.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}

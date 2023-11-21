@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cucodlrewods0"
-path="res://.godot/imported/rain2.png-cc37e68f0a4610e1060adadc76dd1f28.ctex"
+path="res://.godot/imported/rain2.png-4880418e7784bc4b75c031a493698a55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rain2.png"
-dest_files=["res://.godot/imported/rain2.png-cc37e68f0a4610e1060adadc76dd1f28.ctex"]
+source_file="res://Sprite/rain2.png"
+dest_files=["res://.godot/imported/rain2.png-4880418e7784bc4b75c031a493698a55.ctex"]
 
 [params]
 

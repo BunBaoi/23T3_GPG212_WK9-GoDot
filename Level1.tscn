@@ -1,16 +1,43 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnn7dldjq7rik"]
+[gd_scene load_steps=19 format=3 uid="uid://bnn7dldjq7rik"]
+
+[ext_resource type="PackedScene" uid="uid://cj7kl8holeoys" path="res://Material/road.tscn" id="1_71ruw"]
+[ext_resource type="Script" path="res://Script/Player.cs" id="1_w0fsb"]
+[ext_resource type="PackedScene" uid="uid://c2lrtpcdoh3w8" path="res://Material/crypt.tscn" id="2_y4hfm"]
+[ext_resource type="Texture2D" uid="uid://bh4qmoovelvpm" path="res://Material/696.jpg" id="3_0da1t"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ii5bd"]
+sky_top_color = Color(0.439216, 0.556863, 0.980392, 1)
+sky_horizon_color = Color(0.687255, 0.705883, 0.799019, 1)
+sky_energy_multiplier = 3.5
+ground_bottom_color = Color(0.309804, 0.266667, 0.215686, 1)
+ground_horizon_color = Color(0.687255, 0.705883, 0.799019, 1)
+
+[sub_resource type="Sky" id="Sky_qjxhm"]
+sky_material = SubResource("ProceduralSkyMaterial_ii5bd")
+
+[sub_resource type="Environment" id="Environment_70rww"]
+background_mode = 2
+background_energy_multiplier = 0.0
+sky = SubResource("Sky_qjxhm")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_kq1xn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4tky"]
-albedo_color = Color(0.301961, 0.227451, 1, 1)
+albedo_color = Color(0.513726, 0.505882, 0.521569, 1)
+albedo_texture = ExtResource("3_0da1t")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kvl72"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_n7l3e"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_4um2b"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i156t"]
+[sub_resource type="BoxMesh" id="BoxMesh_8661b"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c5f11"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v8num"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_275hx"]
 emission_shape = 3
@@ -19,9 +46,15 @@ direction = Vector3(0, -1, 0)
 spread = 5.0
 initial_velocity_min = 15.0
 initial_velocity_max = 15.0
+color = Color(0.658824, 0.658824, 0.658824, 1)
 collision_mode = 1
 collision_friction = 0.0
 collision_bounce = 0.0
+
+[sub_resource type="Curve" id="Curve_ycpbf"]
+max_value = 0.1
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0373832, 0.0652632), 0.584818, 0.584818, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nguo2"]
 cull_mode = 2
@@ -32,43 +65,111 @@ use_particle_trails = true
 
 [sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_dlgca"]
 material = SubResource("StandardMaterial3D_nguo2")
+uv2_padding = 0.2
+curve = SubResource("Curve_ycpbf")
 
 [node name="Node3D" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_70rww")
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Road" type="Node3D" parent="Map"]
+
+[node name="road" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.858423, 0, 0.512942, 0, 1, 0, -0.512942, 0, 0.858423, -8.90701, 5.96046e-07, -41.0552)
+
+[node name="road2" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.984165, 0, -0.177257, 0, 1, 0, 0.177257, 0, 0.984165, -8.35985, 0, -42.0173)
+
+[node name="road3" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.878692, 0, 0.477389, 0, 1, 0, -0.477389, 0, 0.878692, -7.37169, 0, -40.5951)
+
+[node name="road4" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.978213, 0, 0.207604, 0, 1, 0, -0.207604, 0, 0.978213, -6.96826, 0, -41.0258)
+
+[node name="road5" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.854032, 0, -0.52022, 0, 1, 0, 0.52022, 0, 0.854032, -5.28323, 0, -39.8946)
+
+[node name="road6" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.84472, 0, 0.535208, 0, 1, 0, -0.535208, 0, 0.84472, -5.33979, 0, -43.3903)
+
+[node name="road7" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.714167, 0, 0.699975, 0, 1, 0, -0.699975, 0, 0.714167, -7.24859, 0, -43.4557)
+
+[node name="road8" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.770747, 0, 0.637142, 0, 1, 0, -0.637142, 0, 0.770747, -9.98897, -5.96046e-07, -42.4555)
+
+[node name="road9" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.907286, 0, 0.420513, 0, 1, 0, -0.420513, 0, 0.907286, -8.80911, 0, -43.3195)
+
+[node name="road10" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.837175, 0, 0.546935, 0, 1, 0, -0.546935, 0, 0.837175, -8.20367, 0, -44.9603)
+
+[node name="road11" parent="Map/Road" instance=ExtResource("1_71ruw")]
+transform = Transform3D(0.93358, 0, 0.358368, 0, 1, 0, -0.358368, 0, 0.93358, -3.68559, 0, -41.3292)
+
+[node name="crypt" parent="Map" instance=ExtResource("2_y4hfm")]
+transform = Transform3D(-0.452279, 0, 0.891876, 0, 1, 0, -0.891876, 0, -0.452279, -14.5334, 0, -38.8156)
+
+[node name="Floor" type="MeshInstance3D" parent="Map"]
+transform = Transform3D(241.028, 0, 0, 0, 20, 0, 0, 0, 136.441, 0, 0, 0)
 mesh = SubResource("PlaneMesh_kq1xn")
+skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_f4tky")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/Floor"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Floor/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_kvl72")
 
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="MeshInstance3D"]
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Map/Floor"]
 transform = Transform3D(1, 0, 0, 0, 0.0239944, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.942572, 0.334004, 0, -0.334004, 0.942572, 0.161824, 7.31781, 8.06246)
+[node name="StaticBody3D" type="StaticBody3D" parent="Map"]
+transform = Transform3D(13, 0, 0, 0, 6, 0, 0, 0, 1, 0, 2.86965, 6.61971)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/StaticBody3D"]
+shape = SubResource("BoxShape3D_4um2b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/StaticBody3D"]
+mesh = SubResource("BoxMesh_8661b")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.81244, 1.21063e-08, 0.583045, -0.228151, 0.920259, 0.317915, -0.536553, -0.391309, 0.747655, 9.70692, 9.57227, 12.3376)
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.16296, 0)
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10537, 0)
+script = ExtResource("1_w0fsb")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-mesh = SubResource("CapsuleMesh_n7l3e")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_c5f11")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-shape = SubResource("CapsuleShape3D_i156t")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_v8num")
 
-[node name="Rain" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.16296, 0)
+[node name="Head" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.475793, 0)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="Rain"]
-transform = Transform3D(3.01315, 0, 0, 0, 1.18459, 0, 0, 0, 2.98028, 0, 7.46802, 0)
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
+
+[node name="Rain" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65603, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="CharacterBody3D/Rain"]
+transform = Transform3D(3.01315, 0, 0, 0, 1.18459, 0, 0, 0, 2.98028, 2.11692, 10.4424, 1.85232)
+amount = 1000
+lifetime = 2.0
+randomness = 1.0
 visibility_aabb = AABB(-10, -10, -10, 20, 20, 20)
 trail_enabled = true
+trail_lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_275hx")
 draw_pass_1 = SubResource("RibbonTrailMesh_dlgca")
+
+[node name="Hand" type="Node3D" parent="CharacterBody3D"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CharacterBody3D/Hand"]
+spot_range = 7.44631
+spot_angle = 11.5804

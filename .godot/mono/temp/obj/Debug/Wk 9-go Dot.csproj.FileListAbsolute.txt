@@ -15,3 +15,20 @@ C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\refint\Wk 9-go D
 C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.pdb
 C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.genruntimeconfig.cache
 C:\Users\1022811\Documents\WK9-GoDot\.godot\mono\temp\obj\Debug\ref\Wk 9-go Dot.dll
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\bin\Debug\Wk 9-go Dot.deps.json
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\bin\Debug\Wk 9-go Dot.runtimeconfig.json
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\bin\Debug\Wk 9-go Dot.dll
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\bin\Debug\Wk 9-go Dot.pdb
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\bin\Debug\GodotSharp.dll
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.csproj.AssemblyReference.cache
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.GeneratedMSBuildEditorConfig.editorconfig
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.AssemblyInfoInputs.cache
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.AssemblyInfo.cs
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.csproj.CoreCompileInputs.cache
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.csproj.CopyComplete
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.dll
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\refint\Wk 9-go Dot.dll
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.pdb
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\Wk 9-go Dot.genruntimeconfig.cache
+E:\Unity Games\Semester 3\WK9-GoDot\.godot\mono\temp\obj\Debug\ref\Wk 9-go Dot.dll

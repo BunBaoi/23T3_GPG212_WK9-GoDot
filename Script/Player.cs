@@ -55,4 +55,5 @@ public partial class Player : CharacterBody3D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+	
 }

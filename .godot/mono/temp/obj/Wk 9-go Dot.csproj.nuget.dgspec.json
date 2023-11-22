@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Unity Games\\Semester 3\\WK9-GoDot\\Wk 9-go Dot.csproj": {}
+    "C:\\Users\\1022811\\Documents\\WK9-GoDot\\Wk 9-go Dot.csproj": {}
   },
   "projects": {
-    "E:\\Unity Games\\Semester 3\\WK9-GoDot\\Wk 9-go Dot.csproj": {
+    "C:\\Users\\1022811\\Documents\\WK9-GoDot\\Wk 9-go Dot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Unity Games\\Semester 3\\WK9-GoDot\\Wk 9-go Dot.csproj",
+        "projectUniqueName": "C:\\Users\\1022811\\Documents\\WK9-GoDot\\Wk 9-go Dot.csproj",
         "projectName": "Wk 9-go Dot",
-        "projectPath": "E:\\Unity Games\\Semester 3\\WK9-GoDot\\Wk 9-go Dot.csproj",
-        "packagesPath": "C:\\Users\\vital\\.nuget\\packages\\",
-        "outputPath": "E:\\Unity Games\\Semester 3\\WK9-GoDot\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\1022811\\Documents\\WK9-GoDot\\Wk 9-go Dot.csproj",
+        "packagesPath": "C:\\Users\\1022811\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1022811\\Documents\\WK9-GoDot\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1022811\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +64,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.320\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -15,6 +15,12 @@ run/main_scene="res://Level1.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 config/icon="res://Sprite/icon.svg"
 
+[display]
+
+window/size/viewport_width=1440
+window/size/viewport_height=960
+window/size/borderless=true
+
 [dotnet]
 
 project/assembly_name="Wk 9-go Dot"

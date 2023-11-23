@@ -1,9 +1,11 @@
+OmniLight3D
+Node3D
+GridMap
 DirectionalLight3D
 MeshInstance3D
 CollisionShape3D
 StaticBody3D
 SpotLight3D
-Node3D
 WorldEnvironment
 Camera3D
 CharacterBody3D
@@ -12,4 +14,3 @@ GPUParticles3D
 AnimationPlayer
 Sprite3D
 RigidBody3D
-OmniLight3D

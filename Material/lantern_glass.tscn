@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cctll57myic65"]
+
+[ext_resource type="PackedScene" uid="uid://cc5v7s5fsq2nc" path="res://Material/lantern-glass.glb" id="1_au0to"]
+[ext_resource type="Texture2D" uid="uid://bscbrjolkvey3" path="res://Material/colormap.png" id="2_blv7y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jg61q"]
+albedo_texture = ExtResource("2_blv7y")
+
+[node name="lantern-glass" instance=ExtResource("1_au0to")]
+
+[node name="lantern-glass2" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_jg61q")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="lantern-glass2" index="0"]
+light_energy = 1.926
+light_volumetric_fog_energy = 4.116
+shadow_enabled = true

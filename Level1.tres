@@ -1,0 +1,9 @@
+[gd_resource type="Sky" load_steps=3 format=3 uid="uid://3v5t4wr5km1x"]
+
+[ext_resource type="Texture2D" uid="uid://8ja5cvbmfofa" path="res://Material/NightSky.png" id="1_icd6f"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fnthl"]
+panorama = ExtResource("1_icd6f")
+
+[resource]
+sky_material = SubResource("PanoramaSkyMaterial_fnthl")

@@ -3,7 +3,7 @@ using System;
 
 public partial class Player : CharacterBody3D
 {
-	const float speed = 5f;
+	const float speed = 10f;
 	const float gravity = 30f;
 	const float jumpForce = 10f;
 	const float acceleration = 0.5f;

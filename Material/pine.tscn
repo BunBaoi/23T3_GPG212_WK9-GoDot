@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcbddkdbdh5yh"]
+
+[ext_resource type="PackedScene" uid="uid://4e4v07gklbma" path="res://Material/pine.glb" id="1_hy0y0"]
+[ext_resource type="Texture2D" uid="uid://bscbrjolkvey3" path="res://Material/colormap.png" id="2_rwns2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ram6u"]
+albedo_texture = ExtResource("2_rwns2")
+
+[node name="pine" instance=ExtResource("1_hy0y0")]
+
+[node name="pine2" parent="." index="0"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_ram6u")

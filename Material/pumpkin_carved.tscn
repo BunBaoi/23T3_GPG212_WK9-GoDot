@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://co1jh8ro7ckuo"]
+
+[ext_resource type="PackedScene" uid="uid://cw8aqyji77em8" path="res://Material/pumpkin-carved.glb" id="1_m1tjl"]
+[ext_resource type="Texture2D" uid="uid://bscbrjolkvey3" path="res://Material/colormap.png" id="2_chhuo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6hu2"]
+albedo_texture = ExtResource("2_chhuo")
+
+[node name="pumpkin-carved" instance=ExtResource("1_m1tjl")]
+
+[node name="pumpkin-carved2" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_j6hu2")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="pumpkin-carved2" index="0"]
+light_energy = 7.147
+light_indirect_energy = 1.56
+light_volumetric_fog_energy = 2.6
+shadow_enabled = true

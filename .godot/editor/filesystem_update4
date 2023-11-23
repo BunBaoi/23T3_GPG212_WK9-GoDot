@@ -1,2 +1,5 @@
 res://Level1.tscn
+res://Level1.tres
+res://Mesh/pine_mesh.tres
+res://Mesh/stonepath_mesh.tres
 res://Script/Player.cs
